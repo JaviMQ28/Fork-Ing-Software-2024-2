@@ -1,0 +1,6 @@
+Características que tiene el script:
+- El tipo de formato de entrada, para el nombre de los jugadores, es libre, puede ser desde unicamente números o caulquier alias con caractéres especiales. Lo recomendable es poner nombres cortos y con letras para no confundirse con las demás entradas que se soliciten.
+
+- El tipo de formato de entrada, para la cantidad de sets, tiene que ser de un número positivo, de tipo entero e impar. Se produce un error si no se cumplen esas condiciones.
+
+- El tipo de formato de entrada, para seleccionar al jugador que gana un punto, tiene que ser de un nombre de algun que este jugando el partido, es decir alguno de los que se haya ingresado al comienzo de la ejecución del programa. Se produce un error si no se cumple esas condición.
