@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seleccionar id renta</title>
+    <style>
+        body {
+          background-color: yellow;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selecciona una renta</h1>
+    <label>Selecciona el identificador de una renta y presiona el botón:</label>
+    <form method="post">
+        <select id="idRentar" name="idRentar">
+        {% for renta in rentas %}
+        <option>{{ renta.idRentar }}</option>
+        {% endfor %}
+        </select>
+        <a href="seleccionar/actualizar"><button>Renta seleccionada</button></a>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

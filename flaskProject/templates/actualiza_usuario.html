@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualiza usuario</title>
+    <style>
+        body {
+          background-color: yellow;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Actualiza un usuario</h1>
+    <form method="post">
+        <label for="email">Ingrese el correo electrónico (email):</label>
+        <input type="email" name="email" id="email" maxlength="500"/>
+        <br>
+        <label for="password">Ingrese el password:</label>
+        <input type="password" name="password" id="password" maxlength="64" required/>
+        <br>
+        <label for="opciones">Selecciona la opción que quieres actualizar:</label>
+        <select id="opciones" name="opciones">
+            <option value="opcion1">Nombre</option>
+            <option value="opcion2">Apellido paterno</option>
+            <option value="opcion3">Apellido materno</option>
+            <option value="opcion4">Password</option>
+            <option value="opcion5">Email</option>
+            <option value="opcion6">Super usuario</option>
+        </select>
+        <br>
+        <label for="opcion">Ingrese el dato:</label>
+        <input type="text" name="opcion" id="opcion" required/>
+        <br>
+        <button>Actualizar usuario</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

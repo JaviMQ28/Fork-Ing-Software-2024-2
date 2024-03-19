@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar usuario</title>
+    <style>
+        body {
+          background-color: yellow;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crear un usuario</h1>
+    <form method="post">
+        <label for="nombre">Ingrese el nombre:</label>
+        <input type="text" name="nombre" id="nombre" maxlength="200" required/>
+        <br>
+        <label for="apPat">Ingrese el apellido paterno:</label>
+        <input type="text" name="apPat" id="apPat" maxlength="200" required/>
+        <br>
+        <label for="apMat">Ingrese el apellido materno:</label>
+        <input type="text" name="apMat" id="apMat" maxlength="200"/>
+        <br>
+        <label for="password">Ingrese el password:</label>
+        <input type="password" name="password" id="password" maxlength="64" required/>
+        <br>
+        <label for="email">Ingrese el correo:</label>
+        <input type="email" name="email" id="email" maxlength="500"/>
+        <br>
+        <label for="profilePicture">Ingresa la foto de perfil:</label>
+        <input type="file" name="profilePicture" id="profilePicture"/>
+        <br>
+        <button>Crear usuario</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

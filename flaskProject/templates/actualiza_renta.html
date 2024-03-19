@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualiza renta</title>
+    <style>
+        body {
+          background-color: yellow;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Actualiza una renta</h1>
+    <form method="post">
+        El identificador de la renta es: {{renta.idRentar}}
+        <br>
+        Marca la casilla si es que la película ya fue entregada:
+        <br>
+        {% if renta.estatus == 0 %}
+        <label for="checkbox1">Entregada?</label>
+        <input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1">
+        {% elif renta.estatus == 1 %}
+        <label for="checkbox2">Entregada?</label>
+        <input type="checkbox" id="checkbox2" name="checkbox2" value="checkbox2" checked>
+        {% endif %}
+        <br>
+        <button>Actualizar renta</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

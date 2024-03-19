@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver usuarios</title>
+    <style>
+        body {
+          background-color: yellow;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de usuarios</h1>
+    <ul>
+        {% for usuario in usuarios %}
+        <li>- Identificador: {{ usuario.idUsuario }} , nombre: {{ usuario.nombre }} , correo: {{ usuario.email }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/usuario/">
+        <button>Regresar</button>
+    </a>
+</body>
+</html>

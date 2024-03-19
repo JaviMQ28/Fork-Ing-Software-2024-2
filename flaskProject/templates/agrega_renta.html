@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar renta</title>
+    <style>
+        body {
+          background-color: yellow;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crear una renta</h1>
+    <form method="post">
+        <label for="idUsuario">Ingrese el identificador del usuario:</label>
+        <input type="number" name="idUsuario" id="idUsuario" required/>
+        <br>
+        <label for="idPelicula">Ingrese el identificador de la película:</label>
+        <input type="number" name="idPelicula" id="idPelicula" required/>
+        <br>
+        <label for="dias_de_renta">Ingrese los días de la renta:</label>
+        <input type="number" name="dias_de_renta" id="dias_de_renta"/>
+        <br>
+        <button>Crear renta</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

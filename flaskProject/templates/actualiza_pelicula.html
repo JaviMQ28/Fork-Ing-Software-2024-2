@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualiza pelicula</title>
+    <style>
+        body {
+          background-color: yellow;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Actualiza una pelicula</h1>
+    <form method="post">
+        <label for="idPelicula">Ingrese el identificador de la película:</label>
+        <input type="number" name="idPelicula" id="idPelicula"/>
+        <br>
+        <label for="opciones">Selecciona la opción que quieres actualizar:</label>
+        <select id="opciones" name="opciones">
+            <option value="opcion1">Nombre</option>
+            <option value="opcion2">Genero</option>
+            <option value="opcion3">Duración</option>
+            <option value="opcion4">Inventario</option>
+        </select>
+        <br>
+        <label for="opcion">Ingrese el dato:</label>
+        <input type="text" name="opcion" id="opcion" required/>
+        <br>
+        <button>Actualizar pelicula</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
