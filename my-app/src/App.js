@@ -2,8 +2,9 @@ import React, { useState } from "react";
 
 import "./App.css";
 
-import Alumnos from "./components/Alumnos/Alumnos";
-import NuevoAlumno from "./components/NuevoAlumno/NuevoAlumno";
+import Clientes from "./components/Clientes/Clientes";
+import NuevoCliente from "./components/NuevoCliente/NuevoCliente";
+import EliminaCliente from "./components/EliminaCliente/EliminaCliente";
 
 function App() {
   const [peliculas, setPeliculas] = useState([
@@ -12,34 +13,51 @@ function App() {
     { id: 3, title: "Inception", director: "Christopher Nolan", inventario: 4 },
   ]);
 
-  const [alumnos, setAlumnos] = useState([
+///*
+  const [clientes, setClientes] = useState([
     {
+      id: "1",
       nombre: "Fernando",
-      apellido: "Fong",
-      numCta: 313320679,
+      apellidoPaterno: "Fong",
+      apellidoMaterno: "Fong",
+      contrasenia: "hola",
+      correo: "no",
+      fotoPerfil: "si",
+      superUsuario: "1",
     },
     {
-      nombre: "Valeria",
-      apellido: "Garcia",
-      numCta: 314006088,
-    },
-    {
-      nombre: "Erick",
-      apellido: "Martinez",
-      numCta: 414890123,
+      id: "2",
+      nombre: "Javi",
+      apellidoPaterno: "Man",
+      apellidoMaterno: "Qui",
+      contrasenia: "adios",
+      correo: "yes",
+      fotoPerfil: "no",
+      superUsuario: "0",
     },
   ]);
+//*/
 
-  const agregarAlumno = (alumno) => {
-    const nuevoAlumno = [alumno, ...alumnos];
-    setAlumnos(nuevoAlumno);
-    console.log(nuevoAlumno);
+///*
+  const agregarCliente = (cliente) => {
+    const nuevoCliente = [cliente, ...clientes];
+    setClientes(nuevoCliente);
+    console.log(nuevoCliente);
   };
+//*/
+
+/*
+const eliminarCliente = (cliente) => {
+  const nuevoCliente = [cliente, ...clientes];
+  setClientes(nuevoCliente);
+  console.log(nuevoCliente);
+};
+*/
 
   return (
     <div className="App">
-      <NuevoAlumno onAgregarAlumno={agregarAlumno} />
-      <Alumnos alumnos={alumnos} />
+      <NuevoCliente onAgregarCliente={agregarCliente} />      
+      <Clientes clientes={clientes} />
     </div>
   );
 }

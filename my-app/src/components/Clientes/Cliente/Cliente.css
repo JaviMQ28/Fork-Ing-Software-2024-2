@@ -1,4 +1,4 @@
-.alumno {
+.cliente {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,7 +7,7 @@
     background-color: navy;
 }
 
-.alumno__description {
+.cliente__description {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -17,7 +17,7 @@
     flex: 1;
 }
 
-.alumno h2 {
+.cliente h2 {
     color: white;
     font-size: 1rem;
     flex: 1;
@@ -26,14 +26,14 @@
 }
 
 @media (min-width: 580px) {
-    .alumno__description {
+    .cliente__description {
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
         flex: 1;
     }
 
-    .alumno__description h2 {
+    .cliente__description h2 {
         font-size: 1.25rem;
     }
 }

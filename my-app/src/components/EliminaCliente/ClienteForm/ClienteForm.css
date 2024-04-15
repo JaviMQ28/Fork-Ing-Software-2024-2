@@ -1,4 +1,4 @@
-.nuevo-alumno__controls {
+.elimina-cliente__controls {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -6,13 +6,13 @@
     text-align: left;
 }
 
-.nuevo-alumno__control label {
+.elimina-cliente__control label {
     font-weight: bold;
     margin-bottom: 0.5rem;
     display: block;
 }
 
-.nuevo-alumno__control input {
+.elimina-cliente__control input {
     font: inherit;
     padding: 0.5rem;
     border-radius: 6px;
@@ -21,6 +21,6 @@
     max-width: 100%;
 }
 
-.nuevo-alumno__actions {
+.elimina-cliente__actions {
     text-align: right;
 }
