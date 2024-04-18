@@ -58,7 +58,6 @@ const ClienteForm = (props) => {
       superUsuario: superUsuarioIngresado,
     };
     if (
-      idIngresado === "" ||
       nombreIngresado === "" ||
       apellidoPaternoIngresado === "" ||
       apellidoMaternoIngresado === "" ||
@@ -89,8 +88,9 @@ const ClienteForm = (props) => {
           <label>Identificador: </label>
           <input
             type="text"
-            value={idIngresado}
+            value={"Asignado"}
             onChange={cambioIdHandler}
+            readonly
           />
         </div>
         <div className="nuevo-cliente__control">
@@ -118,7 +118,7 @@ const ClienteForm = (props) => {
           />
         </div>
         <div className="nuevo-cliente__control">
-          <label>Contrasenia: </label>
+          <label>Contraseña: </label>
           <input
             type="text"
             value={contraseniaIngresado}

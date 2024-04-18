@@ -20,16 +20,10 @@ const Clientes = (props) => {
             )}
         </ul>
     );
-    const content = clientes.map((cliente) => 
-        <div>      
-            Nombre = {cliente.nombre} {cliente.apellidoPaterno} {cliente.apellidoMaterno}, Contraseña: {cliente.contrasenia}, Correo electrónico: {cliente.correo}, Foto de perfil: {cliente.fotoPerfil}, Super Usuario = {cliente.superUsuario}
-        </div>
-    );
     return (
         <div>
             {sidebar}      
-            <hr />
-            {content}    
+            <hr />  
         </div>
     );
 };

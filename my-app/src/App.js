@@ -1,63 +1,25 @@
 import React, { useState } from "react";
 
 import "./App.css";
-
-import Clientes from "./components/Clientes/Clientes";
-import NuevoCliente from "./components/NuevoCliente/NuevoCliente";
-import EliminaCliente from "./components/EliminaCliente/EliminaCliente";
+import Menu from "./Menu";
+import CRUD_Cliente from "./CRUD_Cliente";
+import CRUD_Pelicula from "./CRUD_Pelicula";
+import CRU_Renta from "./CRU_Renta";
 
 function App() {
-  const [peliculas, setPeliculas] = useState([
-    { id: 1, title: "Spiderman", director: "Sam R." },
-    { id: 2, title: "Batman", director: "Tim Burton" },
-    { id: 3, title: "Inception", director: "Christopher Nolan", inventario: 4 },
-  ]);
 
-///*
-  const [clientes, setClientes] = useState([
-    {
-      id: "1",
-      nombre: "Fernando",
-      apellidoPaterno: "Fong",
-      apellidoMaterno: "Fong",
-      contrasenia: "hola",
-      correo: "no",
-      fotoPerfil: "si",
-      superUsuario: "1",
-    },
-    {
-      id: "2",
-      nombre: "Javi",
-      apellidoPaterno: "Man",
-      apellidoMaterno: "Qui",
-      contrasenia: "adios",
-      correo: "yes",
-      fotoPerfil: "no",
-      superUsuario: "0",
-    },
-  ]);
-//*/
+  const [mostrarVista, setMostrarVista] = useState(0);
 
-///*
-  const agregarCliente = (cliente) => {
-    const nuevoCliente = [cliente, ...clientes];
-    setClientes(nuevoCliente);
-    console.log(nuevoCliente);
+  const muestraVista = (vista) => {
+    setMostrarVista(vista);
   };
-//*/
 
-/*
-const eliminarCliente = (cliente) => {
-  const nuevoCliente = [cliente, ...clientes];
-  setClientes(nuevoCliente);
-  console.log(nuevoCliente);
-};
-*/
-
-  return (
+  return (                
     <div className="App">
-      <NuevoCliente onAgregarCliente={agregarCliente} />      
-      <Clientes clientes={clientes} />
+      {mostrarVista === 0 && <Menu onClick={muestraVista} />}
+      {mostrarVista === 1 && <CRUD_Cliente onClick={muestraVista} />}
+      {mostrarVista === 2 && <CRUD_Pelicula onClick={muestraVista} />}   
+      {mostrarVista === 3 && <CRU_Renta onClick={muestraVista} />}   
     </div>
   );
 }

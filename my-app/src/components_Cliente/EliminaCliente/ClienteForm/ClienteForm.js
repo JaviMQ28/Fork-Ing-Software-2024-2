@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import "./ClienteForm.css";
 import "../../Clientes/Clientes.css"
 
-const ClienteForm = (props) => {
-  const [listaClientes, setlistaClientesIngresado] = useState("");
+const ClienteForm = (props) => {  
   const [idIngresado, setIdIngresado] = useState("");
 
   const cambioIdHandler = (event) => {
@@ -23,7 +22,7 @@ const ClienteForm = (props) => {
 
     /*
     setlista((prevState) =>
-      prevState.filter((todo, index) => index !== indexItem)
+      prevState.filter((listaClientes, index) => index !== indexItem)
     );
     */
 
