@@ -1,5 +1,3 @@
-// https://es.stackoverflow.com/questions/436281/navegacion-en-la-misma-pagina-con-react
-// 
 import React, { useState } from "react";
 
 import "./App.css";
@@ -10,7 +8,7 @@ import EliminaPelicula from "./components_Pelicula/EliminaPelicula/EliminaPelicu
 import ActualizaPelicula from "./components_Pelicula/ActualizaPelicula/ActualizaPelicula";
 
 const CRUD_Pelicula = ({onClick}) => {
-  ///*
+
   const [peliculas, setPeliculas] = useState([
     { id: "1", nombre: "Spiderman", genero: "Acción", duracion: "1:00", inventario: "2" },
     { id: "2", nombre: "Batman", genero: "Acción", duracion: "2:00", inventario: "10" },
@@ -68,7 +66,6 @@ const CRUD_Pelicula = ({onClick}) => {
     nuevaListaPeliculas = [...nuevaListaPeliculas, pelicula];
     setPeliculas(nuevaListaPeliculas);    
   };
-  //*/
 
   return (
     <div className="Pelicula">

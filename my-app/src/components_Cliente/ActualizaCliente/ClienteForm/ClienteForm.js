@@ -64,17 +64,6 @@ const ClienteForm = (props) => {
       return;
     }
     props.onActualizarCliente(cliente);
-    /*
-    setIdIngresado("");
-    setNombreIngresado("");
-    setApellidoPaternoIngresado("");
-    setApellidoMaternoIngresado("");
-    setContraseniaIngresado("");
-    setCorreoIngresado("");
-    setFotoPerfilIngresado("");
-    setFotoPerfilIngresado("");
-    setSuperUsuarioIngresado("");
-    */
   };
 
   return (

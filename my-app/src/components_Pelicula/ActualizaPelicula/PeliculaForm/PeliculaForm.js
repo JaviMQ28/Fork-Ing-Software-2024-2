@@ -46,17 +46,6 @@ const PeliculaForm = (props) => {
       return;
     }
     props.onActualizarPelicula(cliente);
-    /*
-    setIdIngresado("");
-    setNombreIngresado("");
-    setApellidoPaternoIngresado("");
-    setApellidoMaternoIngresado("");
-    setContraseniaIngresado("");
-    setCorreoIngresado("");
-    setFotoPerfilIngresado("");
-    setFotoPerfilIngresado("");
-    setSuperUsuarioIngresado("");
-    */
   };
 
   return (

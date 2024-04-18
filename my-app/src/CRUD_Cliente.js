@@ -1,5 +1,3 @@
-// https://es.stackoverflow.com/questions/436281/navegacion-en-la-misma-pagina-con-react
-// 
 import React, { useState } from "react";
 
 import "./App.css";
@@ -11,7 +9,6 @@ import ActualizaCliente from "./components_Cliente/ActualizaCliente/ActualizaCli
 
 const CRUD_Cliente = ({onClick}) => {
 
-///*
   const [clientes, setClientes] = useState([
     {
       id: "1",
@@ -44,9 +41,7 @@ const CRUD_Cliente = ({onClick}) => {
       superUsuario: "0",
     },
   ]);
-//*/
 
-///*
   const agregarCliente = (cliente) => {
     const nuevoCliente = [...clientes, cliente];    
     let i = 0;
@@ -56,9 +51,7 @@ const CRUD_Cliente = ({onClick}) => {
     nuevoCliente[clientes.length].id = "" + i;
     setClientes(nuevoCliente);
   };
-//*/
 
-///*
   const eliminarCliente = (id) => {
     let eliminar = clientes[0];
     let encontrado = false;
@@ -79,30 +72,27 @@ const CRUD_Cliente = ({onClick}) => {
     }
     setClientes(nuevaListaClientes);    
   };
-//*/
 
-///*
-const actualizarCliente = (cliente) => {
-  let id = cliente.id;
-  let eliminar = clientes[0];
-  let encontrado = false;
-  for (let i = 0; i < clientes.length; i++) {
-    console.log(clientes[i]);
-    if (id === clientes[i].id) {
-      eliminar = clientes[i];
-      encontrado = true;
-    }
-  }    
-  if (!encontrado) {
-    alert("El identificador no existe!!");
-    return;
-  }    
-  let nuevaListaClientes = clientes.filter(cliente => cliente !== eliminar);
-  cliente.id = eliminar.id;
-  nuevaListaClientes = [...nuevaListaClientes, cliente];
-  setClientes(nuevaListaClientes);    
-};
-//*/
+  const actualizarCliente = (cliente) => {
+    let id = cliente.id;
+    let eliminar = clientes[0];
+    let encontrado = false;
+    for (let i = 0; i < clientes.length; i++) {
+      console.log(clientes[i]);
+      if (id === clientes[i].id) {
+        eliminar = clientes[i];
+        encontrado = true;
+      }
+    }    
+    if (!encontrado) {
+      alert("El identificador no existe!!");
+      return;
+    }    
+    let nuevaListaClientes = clientes.filter(cliente => cliente !== eliminar);
+    cliente.id = eliminar.id;
+    nuevaListaClientes = [...nuevaListaClientes, cliente];
+    setClientes(nuevaListaClientes);    
+  };
 
   return (
     <div className="Cliente">

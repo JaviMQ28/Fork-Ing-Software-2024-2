@@ -28,17 +28,6 @@ const RentaForm = (props) => {
       return;
     }
     props.onActualizarRenta(renta);
-    /*
-    setIdIngresado("");
-    setNombreIngresado("");
-    setApellidoPaternoIngresado("");
-    setApellidoMaternoIngresado("");
-    setContraseniaIngresado("");
-    setCorreoIngresado("");
-    setFotoPerfilIngresado("");
-    setFotoPerfilIngresado("");
-    setSuperUsuarioIngresado("");
-    */
   };
 
   return (

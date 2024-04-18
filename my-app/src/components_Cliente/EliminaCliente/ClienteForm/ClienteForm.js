@@ -19,39 +19,7 @@ const ClienteForm = (props) => {
       alert("Campos vacíos!!");
       return;
     }
-
-    /*
-    setlista((prevState) =>
-      prevState.filter((listaClientes, index) => index !== indexItem)
-    );
-    */
-
-    /*
-    if (
-      idIngresado === ""
-    ) {
-      alert("Campos vacíos!!");
-      return;
-    }
     
-    const clientes_lista = props.clientes    
-    for (let i = 0; i < clientes_lista.length; i++) {
-      if (id === clientes_lista[i].id) {
-        cliente = {
-          id: idIngresado,
-          nombrePaterno: idIngresado,      
-        };
-      }      
-    }
-    
-    if (
-      props.cliente.id !== id
-    ) {
-      alert("El identificador no existe!!");
-      return;
-    }
-    */
-
     props.onEliminarCliente(idIngresado);
   };
 
